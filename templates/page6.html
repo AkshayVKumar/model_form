@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Webpages</title>
+</head>
+<body>
+    {% if objects %}
+    <h1>Webpages details</h1>
+        <table border="2pt">
+            <thead>
+                <th>Topic Name</th>
+                <th>Webpage Name</th>
+                <th>URL</th>
+            </thead>
+            {% for obj in objects %}
+            <tr>
+                <td>{{obj.topic}}</td>
+                <td>{{obj.name}}</td>
+                <td>{{obj.url}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+    <h1>Data Not found</h1>
+    {% endif %}
+</body>
+</html>

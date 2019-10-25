@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Topic</title>
+</head>
+<body>
+    {% if objects %}
+    <h1>Topic TABLE</h1>
+        <table border="2pt">
+            <thead>
+                <th>Topic_Name</th>
+            </thead>
+            {% for obj in objects %}
+            <tr>
+                <td>{{obj.topic}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+    <h1>Data Not found</h1>
+    {% endif %}
+</body>
+</html>
